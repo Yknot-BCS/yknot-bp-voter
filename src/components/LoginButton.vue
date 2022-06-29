@@ -1,15 +1,16 @@
 <template>
   <div>
-    <div v-if="!isAuthenticated" class="q-px-md">
+    <div v-if="!isAuthenticated" class="q-px-md row items-center">
       <q-btn
         @click="showLogin = true"
         color="secondary"
         text-color="black"
-        label="Login"
+        label="Login to vote"
+        outline
       />
     </div>
     <div v-if="isAuthenticated" class="q-px-md row">
-      <div @click="goToAccountPage" class="account-name q-px-md">
+      <div class="account-name q-px-md row items-center">
         {{ accountName }}
       </div>
       <q-btn
@@ -17,6 +18,7 @@
         color="secondary"
         text-color="black"
         label="Logout"
+        outline
       />
     </div>
     <q-dialog v-model="showLogin">
@@ -27,7 +29,7 @@
           v-ripple
           :style="{
             background: wallet.getStyle().background,
-            color: wallet.getStyle().textColor
+            color: wallet.getStyle().textColor,
           }"
         >
           <q-item-section class="cursor-pointer" avatar @click="onLogin(idx)">
@@ -52,9 +54,7 @@
               flat
               size="12px"
             >
-              <q-tooltip>
-                Get app
-              </q-tooltip>
+              <q-tooltip> Get app </q-tooltip>
             </q-btn>
           </q-item-section>
         </q-item>
@@ -84,8 +84,8 @@ export default {
       "isAuthenticated",
       "accountName",
       "loading",
-      "isAutoLoading"
-    ])
+      "isAutoLoading",
+    ]),
   },
   methods: {
     ...mapActions("account", ["login", "logout", "autoLogin"]),
@@ -101,21 +101,14 @@ export default {
     openUrl(url) {
       window.open(url);
     },
-    goToAccountPage() {
-      const accountPath = `/account/${this.accountName}`;
-      if (this.$router.currentRoute.path !== accountPath) {
-        this.$router.push({ path: accountPath });
-      }
-    }
   },
   async mounted() {
     await this.autoLogin(this.$route.query.returnUrl);
-  }
+  },
 };
 </script>
 
 <style lang="sass" scoped>
 .account-name
-    color: white
-    font-size: 20px
+    // font-size: 1rem
 </style>

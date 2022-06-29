@@ -1,24 +1,47 @@
 <template>
-  <q-page class="column justify-center items-center">
-    <img class="logo" alt="Telos logo" src="~assets/telos-logo-full.png" />
-    <h6 class="description">
-      Use this template as a starting point for your app and save the time of writing all the boilerplate code.
-      It has an implementation of UAL (Universal
-      Authenticator Library) which you can test with the Login button.  There are other examples and essential quasar links in the side menu.
-    </h6>
+  <q-page class="column justify-center items-center q-px-sm">
+    <div class="text-h4 text-weight-thin">VOTE FOR YKNOT</div>
+    <div class="subtitle text-center q-my-md">
+      At Yknot we value fair governance highly. If you appreciate our products
+      and the services we offer to Telos, please consider voting for our
+      blockproducer.
+    </div>
+    <div class="row justify-center full-width q-mb-md">
+      <div class="subtitle-underline"></div>
+    </div>
+    <div class="row justify-center full-width">
+      <vote-card />
+    </div>
   </q-page>
 </template>
 
 <script>
+import voteCard from "src/components/VoteCard.vue";
 export default {
-  name: "Index"
+  name: "Index",
+  components: {
+    voteCard,
+  },
 };
 </script>
 
-<style lang="sass" scoped>
-.logo
-  max-width: 400px
-
-.description
-  max-width: 800px
+<style lang="scss" scoped>
+// .vote-section {
+//   width: 100%;
+//   background: $;
+// }
+.q-page {
+  flex-basis: 500px;
+  flex-grow: 0;
+}
+.subtitle-underline {
+  width: 15rem;
+  height: 1px;
+  background: $accent;
+}
+.subtitle {
+  font-family: judson-italic;
+  line-height: 1rem;
+  color: $accent;
+}
 </style>
