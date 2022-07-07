@@ -1,5 +1,5 @@
 <template>
-  <q-page class="column justify-center items-center q-px-sm">
+  <q-page class="column justify-start items-center q-px-sm q-pt-xl">
     <div class="text-h4 text-weight-thin">VOTE FOR YKNOT</div>
     <div class="subtitle text-center q-my-md">
       At Yknot we value fair governance highly. If you appreciate our products
