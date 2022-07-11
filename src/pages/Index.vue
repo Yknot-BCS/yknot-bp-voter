@@ -1,7 +1,7 @@
 <template>
   <q-page class="column justify-start items-center q-px-sm q-pt-xl">
     <div class="text-h4 text-weight-thin">VOTE FOR YKNOT</div>
-    <div class="subtitle text-center q-my-md">
+    <div class="subtitle text-center q-my-md" style="font-size: 2.5vh">
       At Yknot we value fair governance highly. If you appreciate our products
       and the services we offer to Telos, please consider voting for our
       blockproducer.
@@ -41,7 +41,7 @@ export default {
 }
 .subtitle {
   font-family: judson-italic;
-  line-height: 1rem;
+  line-height: 2rem;
   color: $accent;
 }
 </style>
