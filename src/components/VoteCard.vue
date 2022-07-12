@@ -42,7 +42,7 @@ export default {
   },
   data() {
     return {
-      userHasVoted: true,
+      userHasVoted: false,
       userVoteInfo: [],
       bpList: ["bp.yknot"],
     };
@@ -63,7 +63,13 @@ export default {
         show_payer: false,
       });
       this.userVoteInfo = tableResults.rows[0];
-      let producers = this.userVoteInfo.producers;
+      if (!this.userVoteInfo)
+      {
+        return;
+      }
+      else{
+        let producers = this.userVoteInfo.producers;
+      }
       if (
         this.bpList.every((v) => producers.includes(v)) ||
         localStorage.getItem("dontShowVote")
