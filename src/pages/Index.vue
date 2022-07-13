@@ -2,9 +2,8 @@
   <q-page class="column justify-start items-center q-px-sm q-pt-xl">
     <div class="text-h4 text-weight-thin">VOTE FOR YKNOT</div>
     <div class="subtitle text-center q-my-md">
-      At Yknot we value fair governance highly. If you appreciate our products
-      and the services we offer to Telos, please consider voting for our
-      blockproducer.
+      Yknot votes for fair governance. If you appreciate our products and the services
+      we offer to Telos, please vote for our blockproducer.
     </div>
     <div class="row justify-center full-width q-mb-md">
       <div class="subtitle-underline"></div>
