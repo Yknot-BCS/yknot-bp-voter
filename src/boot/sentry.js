@@ -13,13 +13,6 @@ export default boot(({ Vue, router }) => {
         tracingOrigins: ["localhost", "my-site-url.com", /^\//],
       }),
     ],
-    beforeSend(event) {
-      // Check if it is an exception, and if so, show the report dialog
-      if ((event.exception)) {
-        Sentry.showReportDialog({ eventId: event.event_id });
-      }
-      return event;
-    },
     // Set tracesSampleRate to 1.0 to capture 100%
     // of transactions for performance monitoring.
     // We recommend adjusting this value in production
