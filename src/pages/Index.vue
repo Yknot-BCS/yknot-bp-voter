@@ -40,7 +40,8 @@ export default {
 }
 .subtitle {
   font-family: judson-italic;
-  line-height: 1rem;
+  line-height: 1.8rem;
   color: $accent;
+  font-size: clamp(1.5vh, 2.5vh, 3vh);
 }
 </style>
